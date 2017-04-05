@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3E5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/activity_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context="com.example.android.scorekeeper.MainActivity">
+
+            <TextView
+                style="@style/Team_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/TeamOne" />
+
+            <TextView
+                android:id="@+id/team_a_score"
+                style="@style/Score_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="24dp"
+                android:text="@string/InitialScore" />
+
+            <Button
+                style="@style/Button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="add3PointsTeamA"
+                android:text="@string/ThreePTS" />
+
+            <Button
+                style="@style/Button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="add2PointsTeamA"
+                android:text="@string/TwoPTS" />
+
+            <Button
+                style="@style/Button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="add1PointTeamA"
+                android:text="@string/OnePT" />
+
+            <TextView
+                style="@style/Stats_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Stats"/>
+
+            <TextView
+                style="@style/Stats_style"
+                android:id="@+id/team_a_stats_3pts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/InitialScore" />
+
+            <TextView
+                style="@style/Stats_style"
+                android:id="@+id/team_a_stats_2pts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/InitialScore" />
+
+            <TextView
+                style="@style/Stats_style"
+                android:id="@+id/team_a_stats_1pt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/InitialScore" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="#7A1EA1"></View>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context="com.example.android.scorekeeper.MainActivity">
+
+            <TextView
+                style="@style/Team_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/TeamTwo" />
+
+            <TextView
+                android:id="@+id/team_b_score"
+                style="@style/Score_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="24dp"
+                android:text="@string/InitialScore" />
+
+            <Button
+                style="@style/Button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="add3PointsTeamB"
+                android:text="@string/ThreePTS"
+                android:textColor="@android:color/white" />
+
+            <Button
+                style="@style/Button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="add2PointsTeamB"
+                android:text="@string/TwoPTS" />
+
+            <Button
+                style="@style/Button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="add1PointTeamB"
+                android:text="@string/OnePT" />
+
+            <TextView
+                style="@style/Stats_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Stats" />
+
+            <TextView
+                style="@style/Stats_style"
+                android:id="@+id/team_b_stats_3pts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/InitialScore" />
+
+            <TextView
+                style="@style/Stats_style"
+                android:id="@+id/team_b_stats_2pts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/InitialScore" />
+
+            <TextView
+                style="@style/Stats_style"
+                android:id="@+id/team_b_stats_1pt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/InitialScore" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        style="@style/Reset_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resetCounterAB"
+        android:text="@string/Reset" />
+</RelativeLayout>
